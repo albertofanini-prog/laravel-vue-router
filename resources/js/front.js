@@ -19,6 +19,9 @@ window.Vue = require('vue');
 //importare componente
 import App from './views/App.vue'
 
+//importare VueRouter
+import router from './router'
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -28,5 +31,7 @@ import App from './views/App.vue'
  const app = new Vue({
     el: '#root',
     //dirgli cosa montare
-    render: h => h(App)
+    render: h => h(App),
+    //passare router
+    router,
 });

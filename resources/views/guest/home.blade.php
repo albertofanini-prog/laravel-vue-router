@@ -36,9 +36,7 @@
       </script>
 </head>
 <body>
-    <div id="root">
-        Qui Vue viene montato
-    </div>
+    <div id="root"></div>
     <script src="{{asset('js/front.js')}}"></script>
 </body>
 </html>
