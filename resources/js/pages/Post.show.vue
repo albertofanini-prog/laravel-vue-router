@@ -6,6 +6,11 @@
 
 <script>
 export default {
+    data(){
+        return{
+            post: null
+        }
+    },
     mounted(){
         console.log(this.$route)
     },

@@ -55,9 +55,36 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        //recuperare il post con slug corrispondente
+            //Colonna slug deve essere uguale a $slug
+            //first restituisce singolo post
+        $post = Post::with(['category','tags'])->where('slug',$slug)->first();
+
+        //alternativa a ::with(['category','tags'])
+        // $post->category;
+        // $post->tags;
+
+        //se il post c'è
+        if( $post ){
+        // ritornare la risposta
+            // in formato json
+            //     assegnare i valori
+            return response()->json([
+                'post' => $post,
+                'success' => true
+            ]);
+        }
+
+        //altrimenti
+            //risposta in json
+        return response()->json([
+            //messaggio
+            'message' => 'Post not found',
+            'success' => false
+        ], 404);//<-errore
+
     }
 
     /**

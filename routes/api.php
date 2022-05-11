@@ -18,4 +18,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/posts', 'Api\PostController@index');
+Route::namespace('Api')->group(function(){
+    // //Aggiungere rotta index
+    // Route::get('/posts', 'PostController@index');
+
+    // //Aggiungere rotta show
+    // Route::get('/posts/{post}', 'PostController@show');
+
+    //Raggruppare le rotte
+    Route::resource('posts', 'PostController')->only([
+        'index','show'
+    ]);
+});
