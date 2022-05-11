@@ -1,15 +1,29 @@
 <template>
     <div class="app bg-green-100">
         <header>
-            <nav class="container">
-                <ul class="pagination flex justify-center gap-4 items-center">
-                    <li class="flex items-center justify-center text-md bg-blue-300 rounded-full my-6 p-1">Home</li>
+            <nav class="container py-6 flex gap-4 items-center">
+                <ul class="contents">
+
+                    <li class="flex items-center justify-center text-md bg-blue-300 rounded-full my-6 p-1">
+                        <!-- assegnare to="" contente il path da visitrare, tipo href -->
+                        <router-link to="/posts">Posts </router-link>
+                    </li>
+                    <li class="flex items-center justify-center text-md bg-blue-300 rounded-full my-6 p-1">
+                        <!-- fare binding e passare oggetto -->
+                        <router-link :to="{ name: 'contact' }">Contact</router-link>
+                    </li>
+
+                    <!-- <li class="flex items-center justify-center text-md bg-blue-300 rounded-full my-6 p-1">Home</li>
                     <li class="flex items-center justify-center text-md bg-blue-300 rounded-full my-6 p-1">Posts</li>
-                    <li class="flex items-center justify-center text-md bg-blue-300 rounded-full my-6 p-1">Categories</li>
+                    <li class="flex items-center justify-center text-md bg-blue-300 rounded-full my-6 p-1">Categories</li> -->
                 </ul>
             </nav>
         </header>
-        <PostsGrid/>
+        <!-- <PostsGrid/> -->
+
+        <!-- contenuto relativo alla rotta da visualizzare -->
+        <router-view></router-view>
+
         <footer>
             <div class="container py-5">
                 &copy; Boolpress 2022
@@ -19,7 +33,7 @@
 </template>
 
 <script>
-    import PostsGrid from '../components/Posts.index.vue'
+    import PostsGrid from '../pages/Posts.index.vue'
 
     export default{
         components: {

@@ -8,6 +8,9 @@
             <p class="text-gray-700 text-base" v-if="post.category">
             {{post.category.name}}
             </p>
+            <router-link class="bg-orange-300 rounded-md px-3 py-1 text-sm" tag="button" :to="{name: 'posts.show', params: {slug: post.slug} }">
+                Dettaglio
+            </router-link>
         </div>
         <div class="px-6 pt-4 pb-2">
             <span class="inline-block bg-purple-200 text-purple-900 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2" v-for="tag in post.tags" :key="tag.id">{{tag.name}}</span>

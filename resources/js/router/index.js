@@ -10,9 +10,34 @@ import VueRouter from 'vue-router'
 //indicare di usare vuerouter
 Vue.use(VueRouter)
 
+//importare componente da assegnare alla rotta
+import Posts from '../pages/Posts.index.vue'
+
+import Post from '../pages/Post.show.vue'
+
+import Contact from '../pages/Contact.vue'
+
 //definire delle rotte in array
 const routes = [
-
+    //routes deve contenere oggetti
+    {
+        //proprietà path che contiene percorso
+        path: '/posts',
+        //assegnare nome
+        name: 'posts.index',
+        //collegare componente importato da visualizzare
+        component: Posts,
+    },
+    {
+        path: '/posts/:slug',
+        name: 'posts.show',
+        component: Post,
+    },
+    {
+        path: '/contact',
+        name: 'contact',
+        component: Contact
+    }
 ]
 
 //creare istanza router
