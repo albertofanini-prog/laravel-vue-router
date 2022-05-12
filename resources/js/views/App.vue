@@ -1,5 +1,5 @@
 <template>
-    <div class="app bg-green-100">
+    <div class="app bg-green-100 flex-column items-center justify-center">
         <header>
             <nav class="container py-6 flex gap-4 items-center">
                 <ul class="contents">

@@ -1984,12 +1984,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3425,114 +3419,120 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "py-10" }, [
-    _vm._v("\n    " + _vm._s(_vm.$route.params.slug) + "\n    "),
-    _vm.post
-      ? _c("h1", [_vm._v("\n        " + _vm._s(_vm.post.title) + "\n    ")])
-      : _vm._e(),
-    _vm._v(" "),
-    _c("div", { staticClass: "max-w-sm w-full lg:max-w-full lg:flex" }, [
-      _c("div", {
+  return _c("div", { staticClass: "container flex items-center" }, [
+    _c(
+      "div",
+      {
         staticClass:
-          "h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden",
-        staticStyle: { "background-image": "url('/img/card-left.jpg')" },
-        attrs: { title: "Woman holding a mug" },
-      }),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal",
-        },
-        [
-          _c("div", { staticClass: "mb-8" }, [
-            _c(
-              "p",
-              { staticClass: "text-sm text-gray-600 flex items-center mb-2" },
-              [
-                _c(
-                  "svg",
-                  {
-                    staticClass: "fill-current text-gray-500 w-3 h-3 mr-2",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      viewBox: "0 0 20 20",
-                    },
-                  },
-                  [
-                    _c("path", {
-                      attrs: {
-                        d: "M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z",
-                      },
-                    }),
-                  ]
-                ),
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "text-gray-900 font-bold text-xl mb-2" }, [
-              _c("h1", { staticClass: "text-2xl" }, [
-                _vm._v(
-                  "\n                        Titolo: " +
-                    _vm._s(_vm.post.title) +
-                    "\n                    "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _vm.post.category
-              ? _c("p", { staticClass: "text-gray-700 text-md" }, [
-                  _vm._v(
-                    "\n                    Categoria: " +
-                      _vm._s(_vm.post.category.name) +
-                      "    \n                "
-                  ),
-                ])
-              : _vm._e(),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex items-center" }, [
-            _c("img", {
-              staticClass: "w-10 h-10 rounded-full mr-4",
-              attrs: {
-                src: "https://picsum.photos/450/250",
-                alt: "Avatar of Jonathan Reinink",
-              },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "text-sm" }, [
-              _c("p", { staticClass: "text-gray-900 leading-none" }, [
-                _vm._v("Jonathan Reinink"),
-              ]),
-              _vm._v(" "),
+          "container max-w-sm w-full lg:max-w-full lg:flex flex items-center",
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "lg:border-yellow-800 lg:rounded lg:bg-slate-600 p-4 flex flex-col justify-between leading-normal",
+          },
+          [
+            _c("div", { staticClass: "mb-8" }, [
               _c(
-                "ul",
-                { staticClass: "flex gap-2 items-center" },
-                _vm._l(_vm.post.tag, function (tag) {
-                  return _c(
-                    "li",
+                "p",
+                {
+                  staticClass:
+                    "text-sm text-slate-100 flex items-center mb-2 cursor-pointer",
+                },
+                [
+                  _vm._v(
+                    "\n                    Modifica  \n                    "
+                  ),
+                  _c(
+                    "svg",
                     {
-                      key: tag.id,
                       staticClass:
-                        "bg-purple-200 text-purple-900 rounded-full px-3 py-1 text-sm font-semibold after:content-['-']",
+                        " ml-2 fill-current text-slate-100 w-3 h-3 mr-2",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 20 20",
+                      },
                     },
                     [
-                      _vm._v(
-                        "\n                            " +
-                          _vm._s(tag.name) +
-                          "\n                        "
-                      ),
+                      _c("path", {
+                        attrs: {
+                          d: "M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z",
+                        },
+                      }),
                     ]
-                  )
-                }),
-                0
+                  ),
+                ]
               ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "text-slate-100 font-bold text-xl mb-2" },
+                [
+                  _c("h1", { staticClass: "text-2xl" }, [
+                    _vm._v(
+                      "\n                        Titolo: " +
+                        _vm._s(_vm.post.title) +
+                        "\n                    "
+                    ),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _vm.post.category
+                ? _c("p", { staticClass: "text-slate-100 text-md" }, [
+                    _vm._v(
+                      "\n                    Categoria: " +
+                        _vm._s(_vm.post.category.name) +
+                        "    \n                "
+                    ),
+                  ])
+                : _vm._e(),
             ]),
-          ]),
-        ]
-      ),
-    ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex items-center" }, [
+              _c("img", {
+                staticClass: "w-10 h-10 rounded-full mr-4",
+                attrs: {
+                  src: "https://picsum.photos/450/250",
+                  alt: "Avatar of Jonathan Reinink",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-sm" }, [
+                _c("p", { staticClass: "text-slate-100 leading-none" }, [
+                  _vm._v("Jonathan Reinink"),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  { staticClass: "flex gap-2 items-center" },
+                  _vm._l(_vm.post.tag, function (tag) {
+                    return _c(
+                      "li",
+                      {
+                        key: tag.id,
+                        staticClass:
+                          "bg-violet-200 text-violet-400 rounded-full px-3 py-1 text-sm font-semibold after:content-['-']",
+                      },
+                      [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(tag.name) +
+                            "\n                        "
+                        ),
+                      ]
+                    )
+                  }),
+                  0
+                ),
+              ]),
+            ]),
+          ]
+        ),
+      ]
+    ),
   ])
 }
 var staticRenderFns = []
@@ -3634,7 +3634,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "app bg-green-100" },
+    { staticClass: "app bg-green-100 flex-column items-center justify-center" },
     [
       _c("header", [
         _c("nav", { staticClass: "container py-6 flex gap-4 items-center" }, [

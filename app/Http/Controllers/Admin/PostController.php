@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Category;
 
 use App\Http\Controllers\Controller;
-
+use App\Mail\SendPostDeletedMail;
 use App\Post;
 
 use App\Tag;
@@ -163,6 +163,8 @@ class PostController extends Controller
         } else{
             $post->delete();
         }
+
+        // Mail::to('info@boolpress.com')->send( new SendPostDeletedMail);
 
         return redirect()->route('admin.posts.index');
     }
