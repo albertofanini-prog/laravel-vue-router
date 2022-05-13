@@ -36,7 +36,7 @@ Route::middleware('auth')->namespace('Admin')->name('admin.')->prefix('admin')->
     //Ecc
     Route::resource('posts', 'PostController');
     
-    // Route::delete('admin/posts/{post}/force', 'PostController@forceDestroy')->name('post.destroy.force');
+    Route::delete('admin/posts/{post}/force', 'PostController@forceDestroy')->name('posts.destroy.force');
 
 });
 

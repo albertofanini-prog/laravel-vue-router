@@ -3,16 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Category;
-
 use App\Http\Controllers\Controller;
-use App\Mail\SendPostDeletedMail;
 use App\Post;
-
 use App\Tag;
-
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Str;
+use App\Mail\SendPostDeletedMail;
+use Illuminate\Support\Facades\Mail;
 
 // use App\Http\Controllers\Controller;
 
@@ -169,8 +166,18 @@ class PostController extends Controller
         return redirect()->route('admin.posts.index');
     }
 
-    public function forceDestroy(Post $post){
+    /**
+     * Elimina definitivamente.
+     *
+     * @param  \App\Post $post
+     * @return \Illuminate\Http\Response
+     */
+    public function forceDestroy($id){
+        $post = Post::where('id', $id)->withTrashed()->first();
         $post->forceDelete();
+        
+        //creare istanza mail e passarla a send
+        Mail::to('info@boolpress.com')->send( new SendPostDeletedMail());
 
         return redirect()->route('admin.posts.index');
     }

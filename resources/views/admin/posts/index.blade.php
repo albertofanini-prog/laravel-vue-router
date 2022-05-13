@@ -49,7 +49,7 @@
                          --}}
                         </td>
                         <td>
-                            <form action="{{route('admin.posts.destroy', $post)}}" method="POST">
+                            <form action="{{route('admin.posts.destroy.force', $post)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">

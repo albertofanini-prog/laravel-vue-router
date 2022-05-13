@@ -1,7 +1,7 @@
 <template>
-    <div class="container flex items-center">
-        <div class="container max-w-sm w-full lg:max-w-full lg:flex flex items-center">
-            <div class="lg:border-yellow-800 lg:rounded lg:bg-slate-600 p-4 flex flex-col justify-between leading-normal">
+    <div class="container flex items-center" v-if="post">
+        <div class="container w-full flex items-center">
+            <div class="border-yellow-800 rounded bg-slate-600 p-4 flex flex-col justify-between leading-normal">
                 <div class="mb-8">
                     <p class="text-sm text-slate-100 flex items-center mb-2 cursor-pointer">
                         Modifica  
@@ -23,7 +23,7 @@
                     <div class="text-sm">
                         <p class="text-slate-100 leading-none">Jonathan Reinink</p>
                         <ul class="flex gap-2 items-center">
-                            <li class="bg-violet-200 text-violet-400 rounded-full px-3 py-1 text-sm font-semibold after:content-['-']" v-for="tag in post.tag" :key="tag.id">
+                            <li class="mt-2 bg-violet-200 text-violet-400 rounded-full px-1 py-1 text-xs font-semibold" v-for="tag in post.tags" :key="tag.id">
                                 {{tag.name}}
                             </li>
                         </ul>

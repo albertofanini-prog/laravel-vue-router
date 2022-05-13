@@ -3419,121 +3419,116 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container flex items-center" }, [
-    _c(
-      "div",
-      {
-        staticClass:
-          "container max-w-sm w-full lg:max-w-full lg:flex flex items-center",
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "lg:border-yellow-800 lg:rounded lg:bg-slate-600 p-4 flex flex-col justify-between leading-normal",
-          },
-          [
-            _c("div", { staticClass: "mb-8" }, [
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "text-sm text-slate-100 flex items-center mb-2 cursor-pointer",
-                },
-                [
-                  _vm._v(
-                    "\n                    Modifica  \n                    "
-                  ),
-                  _c(
-                    "svg",
-                    {
-                      staticClass:
-                        " ml-2 fill-current text-slate-100 w-3 h-3 mr-2",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        viewBox: "0 0 20 20",
-                      },
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          d: "M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z",
-                        },
-                      }),
-                    ]
-                  ),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "text-slate-100 font-bold text-xl mb-2" },
-                [
-                  _c("h1", { staticClass: "text-2xl" }, [
-                    _vm._v(
-                      "\n                        Titolo: " +
-                        _vm._s(_vm.post.title) +
-                        "\n                    "
-                    ),
-                  ]),
-                ]
-              ),
-              _vm._v(" "),
-              _vm.post.category
-                ? _c("p", { staticClass: "text-slate-100 text-md" }, [
-                    _vm._v(
-                      "\n                    Categoria: " +
-                        _vm._s(_vm.post.category.name) +
-                        "    \n                "
-                    ),
-                  ])
-                : _vm._e(),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex items-center" }, [
-              _c("img", {
-                staticClass: "w-10 h-10 rounded-full mr-4",
-                attrs: {
-                  src: "https://picsum.photos/450/250",
-                  alt: "Avatar of Jonathan Reinink",
-                },
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "text-sm" }, [
-                _c("p", { staticClass: "text-slate-100 leading-none" }, [
-                  _vm._v("Jonathan Reinink"),
-                ]),
-                _vm._v(" "),
+  return _vm.post
+    ? _c("div", { staticClass: "container flex items-center" }, [
+        _c("div", { staticClass: "container w-full flex items-center" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "border-yellow-800 rounded bg-slate-600 p-4 flex flex-col justify-between leading-normal",
+            },
+            [
+              _c("div", { staticClass: "mb-8" }, [
                 _c(
-                  "ul",
-                  { staticClass: "flex gap-2 items-center" },
-                  _vm._l(_vm.post.tag, function (tag) {
-                    return _c(
-                      "li",
+                  "p",
+                  {
+                    staticClass:
+                      "text-sm text-slate-100 flex items-center mb-2 cursor-pointer",
+                  },
+                  [
+                    _vm._v(
+                      "\n                    Modifica  \n                    "
+                    ),
+                    _c(
+                      "svg",
                       {
-                        key: tag.id,
                         staticClass:
-                          "bg-violet-200 text-violet-400 rounded-full px-3 py-1 text-sm font-semibold after:content-['-']",
+                          " ml-2 fill-current text-slate-100 w-3 h-3 mr-2",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20",
+                        },
                       },
                       [
-                        _vm._v(
-                          "\n                            " +
-                            _vm._s(tag.name) +
-                            "\n                        "
-                        ),
+                        _c("path", {
+                          attrs: {
+                            d: "M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z",
+                          },
+                        }),
                       ]
-                    )
-                  }),
-                  0
+                    ),
+                  ]
                 ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "text-slate-100 font-bold text-xl mb-2" },
+                  [
+                    _c("h1", { staticClass: "text-2xl" }, [
+                      _vm._v(
+                        "\n                        Titolo: " +
+                          _vm._s(_vm.post.title) +
+                          "\n                    "
+                      ),
+                    ]),
+                  ]
+                ),
+                _vm._v(" "),
+                _vm.post.category
+                  ? _c("p", { staticClass: "text-slate-100 text-md" }, [
+                      _vm._v(
+                        "\n                    Categoria: " +
+                          _vm._s(_vm.post.category.name) +
+                          "    \n                "
+                      ),
+                    ])
+                  : _vm._e(),
               ]),
-            ]),
-          ]
-        ),
-      ]
-    ),
-  ])
+              _vm._v(" "),
+              _c("div", { staticClass: "flex items-center" }, [
+                _c("img", {
+                  staticClass: "w-10 h-10 rounded-full mr-4",
+                  attrs: {
+                    src: "https://picsum.photos/450/250",
+                    alt: "Avatar of Jonathan Reinink",
+                  },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-sm" }, [
+                  _c("p", { staticClass: "text-slate-100 leading-none" }, [
+                    _vm._v("Jonathan Reinink"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "ul",
+                    { staticClass: "flex gap-2 items-center" },
+                    _vm._l(_vm.post.tags, function (tag) {
+                      return _c(
+                        "li",
+                        {
+                          key: tag.id,
+                          staticClass:
+                            "mt-2 bg-violet-200 text-violet-400 rounded-full px-1 py-1 text-xs font-semibold",
+                        },
+                        [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(tag.name) +
+                              "\n                        "
+                          ),
+                        ]
+                      )
+                    }),
+                    0
+                  ),
+                ]),
+              ]),
+            ]
+          ),
+        ]),
+      ])
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
