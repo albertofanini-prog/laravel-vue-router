@@ -19,7 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+//passare array con rotte da creare per verifica user 
+Auth::routes(['verify' => true]);
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
